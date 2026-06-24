@@ -12,7 +12,7 @@ Software: Cisco Packet Tracer
 
 Dispositivos:
 - 2 roteadores
-- 3 switches
+- 4 switches
 - PCs clientes
 - Servidor DNS
 - Servidor Web
