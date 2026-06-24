@@ -49,7 +49,7 @@ Neste projeto, cada subinterface recebeu um pool de IPs para ser atribuído.
 # Funcionalidades
 - Comunicação entre VLANs na camada de rede.
 - Comunicação entre redes.
-- Redundância entre switchs.
+- Redundância entre switches.
 - Atribuição de endereço IP e DNS via DHCP.
 - Organização de departamentos.
 - Roteamento estático entre redes.
@@ -57,7 +57,7 @@ Neste projeto, cada subinterface recebeu um pool de IPs para ser atribuído.
 
 # Testes realizados
 ### Conectividade inter VLAN
-Foi feito ping em todos dispositivos de todas as VLANs para verificar a conectividade entre elas.
+Foi realizado ping em todos dispositivos de todas as VLANs para verificar a conectividade entre elas.
 
 <img width="465" height="614" alt="Captura de tela 2026-06-23 204417" src="https://github.com/user-attachments/assets/39c89720-9a9f-4bdb-a626-6a2bd2a5c083" />
 <img width="465" height="614" alt="Captura de tela 2026-06-23 204343" src="https://github.com/user-attachments/assets/4206b6c3-4863-4cc5-975b-827a90d097dd" />
@@ -95,6 +95,6 @@ Foi configurado um servidor DNS e um site Web para testar a resolução DNS.
 - Criação de subinterfaces e utilização do protocolo 802.1q.
 - Utilização de VSLM.
 - Diagnóstico de conexão utilizando o comando ping.
-- Redundância entre switchs utilizando o protocolo Spanning Tree.
+- Redundância entre switches utilizando o protocolo Spanning Tree.
 - Configuração do pool DHCP.
 - Configuração de rotas estáticas.
