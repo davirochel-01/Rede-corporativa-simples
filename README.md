@@ -1,20 +1,20 @@
 # Rede-corporativa-simples
 Um laboratório de uma pequena rede corporativa, com objetivo de implementar as tecnologias que aprendi.
 
-## Objetivo
+# Objetivo
 Elaborar uma rede corporativa organizada, utilizando VLANs para segmentação, router-on-a-stick para roteamento inter VLAN, Trunk, STP, VLSM, static route, configuração DHCP e DNS.
 
-## Topologia
+# Topologia
 <img width="1899" height="679" alt="Captura de tela 2026-06-23 194442" src="https://github.com/user-attachments/assets/f37c8feb-2faa-492d-8273-ca46ee490235" />
 
-## Técnologias implementadas
+# Técnologias implementadas
 ### VLANs
 VLAN é uma rede local virtual, utilizada para segmentar um domíni criando subredes, melhorando a segurança, o desempenho e a organização da rede.
 
 <img width="642" height="271" alt="Captura de tela 2026-06-23 195425" src="https://github.com/user-attachments/assets/c71c1fd1-1f64-4ebb-ae51-6ca4d74fb276" />
 
 ### Trunk
-# O trunk permite que múltiplas VLANs trafeguem no enlace.
+O trunk permite que múltiplas VLANs trafeguem no enlace.
 
 <img width="546" height="269" alt="Captura de tela 2026-06-23 200050" src="https://github.com/user-attachments/assets/eceacb92-a43a-4fe9-a933-b39205932a68" />
 
@@ -46,7 +46,7 @@ Neste projeto, cada subinterface recebeu um pool de IPs para ser atribuído.
 
 <img width="644" height="732" alt="Captura de tela 2026-06-23 203609" src="https://github.com/user-attachments/assets/943ab1c6-a40a-43b4-b9bd-185b7ce14b7f" />
 
-### Funcionalidades
+# Funcionalidades
 - Comunicação entre VLANs na camada de rede.
 - Comunicação entre redes.
 - Redundância entre switchs.
@@ -55,7 +55,7 @@ Neste projeto, cada subinterface recebeu um pool de IPs para ser atribuído.
 - Roteamento estático entre redes.
 - Economia de IPs com VSLM.
 
-## Testes realizados
+# Testes realizados
 ### Conectividade inter VLAN
 Foi feito ping em todos dispositivos de todas as VLANs para verificar a conectividade entre elas.
 
@@ -89,7 +89,7 @@ Foi configurado um servidor DNS e um site Web para testar a resolução DNS.
 <img width="1065" height="1026" alt="Captura de tela 2026-06-23 205206" src="https://github.com/user-attachments/assets/b26ac80b-2402-48fb-8b41-5b77406542bb" />
 
 
-### Aprendizados
+# Aprendizados
 - Segmentação de domínio utilizando VLANs.
 - Organização de departamentos.
 - Criação de subinterfaces e utilização do protocolo 802.1q.
