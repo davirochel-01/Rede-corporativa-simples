@@ -1,18 +1,35 @@
 # Rede-corporativa-simples
-Elaboração de uma pequena rede corporativa.
+Projeto desenvolvido no Cisco Packet Tracer com foco de implementação de conceitos fundamentais de redes corporativas, utilizando VLANs, router-on-a-stick, Trunk, 802.1q, Spanning Tree (STP), VLSM, static route, DHCP e DNS.
 
 # Objetivo
-Elaborar uma rede corporativa organizada, utilizando VLANs para segmentação, router-on-a-stick para roteamento inter VLAN, Trunk, STP, VLSM, static route, configuração DHCP e DNS.
+Elaborar uma pequena rede corporativa, utilizando conceitos fundamentais, como VLANs para segmentação de domínio e organização de departamentos, router-on-a-stick para comunicação entre VLANs, Trunk, 802.1q, STP, VLSM, static route, configuração DHCP e DNS.
 
 # Topologia
 <img width="1899" height="679" alt="Captura de tela 2026-06-23 194442" src="https://github.com/user-attachments/assets/f37c8feb-2faa-492d-8273-ca46ee490235" />
 
-# Técnologias implementadas
-### VLANs
-VLAN é uma rede local virtual, utilizada para segmentar um domínio criando subredes, melhorando a segurança, o desempenho e a organização da rede.
+# Ambiente
+Software: Cisco Packet Tracer
 
-VLANS criadas:
+Dispositivos:
+- 2 roteador
+- 3 switches
+- PCs clientes
+- Servidor DNS
+- Servidor Web
 
+
+# Tecnologias implementadas
+- VLANs
+- Router-on-a-stick
+- Trunk 802.1q
+- Spanning Tree Protocol (STP)
+- VLSM
+- Static route
+- DHCP
+- DNS
+
+
+### Endereçamento
 VLAN  |  Departamento  |  Endereço de rede.
 
 VLAN 10 - Financeira - 192.168.1.0/29.
@@ -22,47 +39,6 @@ VLAN 20 - Administrativa - 192.168.1.8/29.
 VLAN 30 - TI - 192.168.16/29.
 
 VLAN 40 - Gerenciamento - 192.168.1.24/29.
-
-<img width="642" height="271" alt="Captura de tela 2026-06-23 195425" src="https://github.com/user-attachments/assets/c71c1fd1-1f64-4ebb-ae51-6ca4d74fb276" />
-
-
-### Trunk
-O trunk permite que múltiplas VLANs trafeguem no enlace.
-
-<img width="546" height="269" alt="Captura de tela 2026-06-23 200050" src="https://github.com/user-attachments/assets/eceacb92-a43a-4fe9-a933-b39205932a68" />
-
-
-### STP
-O protocolo Spanning Tree bloqueia loops em um domínio redundante. Ele desativa o link com o maior custo até o switch Root Bridge, e se por ventura um enlace falhar, esse link é ativado para a rede continuar funcionando.
-
-<img width="688" height="640" alt="Captura de tela 2026-06-23 201316" src="https://github.com/user-attachments/assets/76e61012-47d3-4af4-b229-ac2aa2f21587" />
-
-
-### Router-on-a-stick e 802.1q
-A técnica router-on-a-stick permite o roteamento inter VLAN na camada de rede. Para ela funcionar, é necessário criar subinterfaces na interface do roteador, e implementar o encapsulamento 802.1q para o roteador ler a tag da VLAN que o quadro Ethernet carrega.
-
-<img width="647" height="164" alt="Captura de tela 2026-06-23 201913" src="https://github.com/user-attachments/assets/6a45ac64-373e-4729-a8b8-f52e8c3cb2f1" />
-
-
-### VLSM
-O VLSM (Variable length subnetting mask) é o método de utilizar tamanho de máscaras variados, acabando com o desperdício do antigo modelo de classes IP(A, B, e C).
-Neste projeto a máscara usada para as VLANs foi de /29 (255.255.255.248), permitindo 6 host válidos.
-
-<img width="491" height="62" alt="Captura de tela 2026-06-23 202927" src="https://github.com/user-attachments/assets/cdf1a9f7-822d-4d12-b4d6-e8c55f9ac2c5" />
-
-
-### Static route
-Foi adicionado uma rota estática manualmente, para permitir comunicação com outras redes.
-Neste projeto, foi feito uma rede externa para simular o roteamento entre redes.
-
-<img width="599" height="358" alt="Captura de tela 2026-06-23 203923" src="https://github.com/user-attachments/assets/4d469537-cbb6-4f5f-80ab-b3b05989f9af" />
-
-
-### DHCP
-O DHCP é o protocolo usado para atribuír endereçamento IP aos clientes dinamicamente, além do endereço IP, ele atribui endereço de Gateway e servidor DNS.
-Neste projeto, cada subinterface recebeu um pool de IPs para ser atribuído.
-
-<img width="644" height="732" alt="Captura de tela 2026-06-23 203609" src="https://github.com/user-attachments/assets/943ab1c6-a40a-43b4-b9bd-185b7ce14b7f" />
 
 
 # Funcionalidades
@@ -76,19 +52,19 @@ Neste projeto, cada subinterface recebeu um pool de IPs para ser atribuído.
 
 # Testes realizados
 ### Conectividade inter VLAN
-Foi realizado testes de conectividade ICMPv4 em todos dispositivos de todas as VLANs para diagnosticar a conectividade entre elas.
+Foram realizados testes de conectividade ICMP em todos dispositivos de todas as VLANs para diagnosticar a conexão entre elas.
 
 <img width="465" height="614" alt="Captura de tela 2026-06-23 204417" src="https://github.com/user-attachments/assets/39c89720-9a9f-4bdb-a626-6a2bd2a5c083" />
 <img width="465" height="614" alt="Captura de tela 2026-06-23 204343" src="https://github.com/user-attachments/assets/4206b6c3-4863-4cc5-975b-827a90d097dd" />
 
 
 ### Conectividade entre redes
-Foi realizado um teste de conectividade ICMPv4 para um endereço fora da rede para diagnóstico de conectividade.
+Foi realizado um teste de conectividade ICMP para um endereço fora da rede para diagnóstico de conexão.
 
 <img width="459" height="197" alt="Captura de tela 2026-06-23 204701" src="https://github.com/user-attachments/assets/62ef3abc-ce1d-4e1d-bfec-8192bc40fc74" />
 
 
-### STP over
+### Teste de redundância STP
 Foi simulado a falha de um enlace para o switch root bridge, com objetivo de testar o funcionamento do protocolo STP.
 
 - Link normal:
@@ -115,5 +91,5 @@ Foi configurado um servidor DNS e um site Web para testar a resolução DNS.
 - Utilização de VLSM.
 - Diagnóstico de conexão utilizando ICMP.
 - Redundância entre switches utilizando o protocolo Spanning Tree (STP).
-- Configuração DHCP e DNS resolver.
+- Configuração DHCP e resolução de nomes DNS.
 - Configuração de rotas estáticas.
