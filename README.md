@@ -49,7 +49,7 @@ Dispositivos:
 
 # Testes realizados
 ### Conectividade inter VLAN
-Foram realizados testes de conexão ICMP em todos dispositivos de todas as VLANs para diagnósticar a conectividade entre elas.
+Foram realizados testes de conexão ICMP em todos dispositivos de todas as VLANs para diagnóstico de conectividade entre elas.
 
 <img width="465" height="614" alt="Captura de tela 2026-06-23 204417" src="https://github.com/user-attachments/assets/39c89720-9a9f-4bdb-a626-6a2bd2a5c083" />
 <img width="465" height="614" alt="Captura de tela 2026-06-23 204343" src="https://github.com/user-attachments/assets/4206b6c3-4863-4cc5-975b-827a90d097dd" />
